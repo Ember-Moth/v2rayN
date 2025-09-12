@@ -98,14 +98,6 @@
 
                     <MenuItem x:Name="menuCheckUpdate" Header="{x:Static resx:ResUI.menuCheckUpdate}" />
 
-                    <MenuItem x:Name="menuHelp" Padding="8,0">
-                        <MenuItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{x:Static resx:ResUI.menuHelp}" />
-                            </StackPanel>
-                        </MenuItem.Header>
-                    </MenuItem>
-
                     <MenuItem x:Name="menuClose" Padding="8,0">
                         <MenuItem.Header>
                             <StackPanel Orientation="Horizontal">

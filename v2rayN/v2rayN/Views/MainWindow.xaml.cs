@@ -433,7 +433,6 @@ public partial class MainWindow
                 Header = string.Format(ResUI.menuWebsiteItem, it.CoreType.ToString().Replace("_", " ")).UpperFirstChar()
             };
             item.Click += MenuItem_Click;
-            menuHelp.Items.Add(item);
         }
     }
 

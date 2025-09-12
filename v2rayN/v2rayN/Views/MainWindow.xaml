@@ -257,23 +257,6 @@
                         <Separator />
                         <Menu Margin="0,1" Style="{StaticResource ToolbarMenu}">
                             <MenuItem
-                                x:Name="menuHelp"
-                                Padding="8,0"
-                                AutomationProperties.Name="{x:Static resx:ResUI.menuHelp}">
-                                <MenuItem.Header>
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon
-                                            Margin="{StaticResource MarginRight8}"
-                                            VerticalAlignment="Center"
-                                            Kind="HelpCircleOutline" />
-                                        <TextBlock Text="{x:Static resx:ResUI.menuHelp}" />
-                                    </StackPanel>
-                                </MenuItem.Header>
-                            </MenuItem>
-                        </Menu>
-                        <Separator />
-                        <Menu Margin="0,1" Style="{StaticResource ToolbarMenu}">
-                            <MenuItem
                                 x:Name="menuClose"
                                 Padding="8,0"
                                 AutomationProperties.Name="{x:Static resx:ResUI.menuClose}">

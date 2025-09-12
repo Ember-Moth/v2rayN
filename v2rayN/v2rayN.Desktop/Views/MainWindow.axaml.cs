@@ -171,8 +171,6 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
             menuGlobalHotkeySetting.IsVisible = false;
         }
         menuAddServerViaScan.IsVisible = false;
-
-        AddHelpMenuItem();
     }
 
     #region Event
@@ -458,23 +456,6 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
         else if (_config.UiItem.MainGirdOrientation == EGirdOrientation.Vertical)
         {
             ConfigHandler.SaveMainGirdHeight(_config, gridMain1.RowDefinitions[0].ActualHeight, gridMain1.RowDefinitions[2].ActualHeight);
-        }
-    }
-
-    private void AddHelpMenuItem()
-    {
-        var coreInfo = CoreInfoManager.Instance.GetCoreInfo();
-        foreach (var it in coreInfo
-            .Where(t => t.CoreType != ECoreType.v2fly
-                        && t.CoreType != ECoreType.hysteria))
-        {
-            var item = new MenuItem()
-            {
-                Tag = it.Url?.Replace(@"/releases", ""),
-                Header = string.Format(ResUI.menuWebsiteItem, it.CoreType.ToString().Replace("_", " ")).UpperFirstChar()
-            };
-            item.Click += MenuItem_Click;
-            menuHelp.Items.Add(item);
         }
     }
 
